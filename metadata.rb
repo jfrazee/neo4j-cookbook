@@ -1,0 +1,16 @@
+name             'neo4j'
+maintainer       'Joey Frazee'
+maintainer_email ''
+license          'All rights reserved'
+description      'Installs/Configures Neo4j'
+long_description 'Installs/Configures Neo4j'
+version          '0.1.0'
+
+depends 'yum'
+depends 'java'
+depends 'nginx'
+
+supports 'amazon'
+supports 'centos'
+supports 'fedora'
+supports 'redhat'
