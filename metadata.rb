@@ -1,7 +1,7 @@
 name             'neo4j'
 maintainer       'Joey Frazee'
 maintainer_email ''
-license          'All rights reserved'
+license          'MIT'
 description      'Installs/Configures Neo4j'
 long_description 'Installs/Configures Neo4j'
 version          '0.1.0'
