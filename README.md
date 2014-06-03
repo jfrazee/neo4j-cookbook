@@ -1,10 +1,10 @@
 # neo4j-cookbook
 
-TODO: Enter the cookbook description here.
+Installs/configures neo4j with nginx proxy
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+* centos-6.5
 
 ## Attributes
 
@@ -48,4 +48,4 @@ Include `neo4j` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Joey Frazee
