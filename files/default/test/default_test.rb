@@ -39,7 +39,7 @@ describe_recipe "neo4j::default" do
     end
 
     it "creates /var/log/nginx" do
-      directory("/var/log/nginx").must_exist.with(:owner, "nginx").with(:group, "nginx")
+      directory("/var/log/nginx").must_exist.with(:owner, "nginx").with(:group, "root")
     end
   end
 
