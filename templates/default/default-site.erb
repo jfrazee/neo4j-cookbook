@@ -1,11 +1,18 @@
 server {
-  listen       8080;
+  listen       <%= node['neo4j']['proxy']['port'] %>;
   server_name  0.0.0.0;
 
   proxy_set_header  X-Real-IP       $remote_addr;
   proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
 
   location / {
+    <% if node['neo4j']['proxy']['username'] && node['neo4j']['proxy']['password'] %>
+    auth_basic "Restricted";
+    auth_basic_user_file <%= node['nginx']['dir'] %>/htpasswd;
+    <% end %>
     proxy_pass http://localhost:7474/;
+    <% if node['neo4j']['proxy']['username'] && node['neo4j']['proxy']['password'] %>
+    proxy_set_header Authorization "";
+    <% end %>
   }
 }
